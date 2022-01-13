@@ -28,5 +28,5 @@ def main_menu(func):
 @main_menu
 def menu_selection():
     selected = input("\nPlease Enter:")
-    return int (selected)
+    return int(selected)
 

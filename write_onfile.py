@@ -8,7 +8,7 @@ def write_board(board):
     line4 = str(board['1'] + '|' + board['2'] + '|' + board['3'])
     mainline = f"\n{line1}\n{line2}\n{line3}\n{line2}\n{line4}\n"
     try:
-        file = open("record.txt","a")
+        file = open("record.txt", "a")
         file.write(mainline)
 
     except:
@@ -16,18 +16,18 @@ def write_board(board):
 
 #Adding New Player in Player Files 
 #Player1.txt
-def add_player_one(name,win,loss):
+def add_player_one(name, win, loss):
     try:
-        file_player_one = open("Player1.txt","w")
+        file_player_one = open("Player1.txt", "w")
         update_player = f"Name: {name}\nTotalWins: {win}\nTotalLoss: {loss}"
         file_player_one.write(update_player)
     except:
         print("Player1 Can't Open\n New Player record is not saved")
 
 #Player2.txt
-def add_player_two(name,win,loss):
+def add_player_two(name, win, loss):
     try:
-        file_player_two = open("Player2.txt","w")
+        file_player_two = open("Player2.txt", "w")
         update_player = f"Name: {name}\nTotalWins: {win}\nTotalLoss: {loss}"
         file_player_two.write(update_player)
     except:

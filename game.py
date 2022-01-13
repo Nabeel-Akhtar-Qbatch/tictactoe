@@ -11,7 +11,7 @@ def game():
         file = open("record.txt", "a")
     except:
          print("File not available\nThis game will not be recorded")
-    dt =datetime.now()
+    dt = datetime.now()
     players = f"\n{player_one.player_name}(X) vs {player_two.player_name}(O)  {dt}"
     print(players)
     file.write(players)
@@ -28,12 +28,13 @@ def game():
         print_board(the_board)
         write_board(the_board)
         if turn == 'X': 
-            print("It's your turn," +player_one.player_name+ "("+ turn + ").Move to which place?")
-            move = input()
-            move = str(move)
+            turn_printer = f"It's your turn, {player_one.player_name} ({turn}).Move to which place?"
+            print(turn_printer)
+            move = str(input())
 
         else:
-            print("It's your turn," +player_two.player_name+ "("+ turn + ").Move to which place?")
+            turn_printer = f"It's your turn, {player_two.player_name} ({turn}).Move to which place?"
+            print(turn_printer)
             move = str(input())
 
         if the_board[move] == ' ':

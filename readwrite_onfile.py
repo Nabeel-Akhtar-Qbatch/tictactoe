@@ -18,8 +18,8 @@ finally:
     file_player_two.close()
 
 #Filtering Required data from List
-player_one_data = list(map (lambda sub_list: sub_list.split(': ').pop(),file_player_one_data))
-player_two_data = list(map (lambda sub_list: sub_list.split(': ').pop(),file_player_two_data))
+player_one_data = list(map(lambda sub_list: sub_list.split(': ').pop(),file_player_one_data))
+player_two_data = list(map(lambda sub_list: sub_list.split(': ').pop(),file_player_two_data))
 
 #Creating Player1 and Player2
 player_one = Player(player_one_data[0],int(player_one_data[1]),int(player_one_data[2]))
@@ -39,19 +39,10 @@ def add_new_player(p):
     t_win = input("\nTotal Wins: ")
     t_loss = input("\nTotal Loss: ")
     if p == 1:
-        add_player_one(name,t_win,t_loss)
+        add_player_one(name, t_win, t_loss)
     elif p == 2:
-        add_player_two(name,t_win,t_loss)
+        add_player_two(name, t_win, t_loss)
     else:
         print("\n!!!Wrong Selection!!!\n")
         return
-
-    
-
-
-
-
-
-
-
 
