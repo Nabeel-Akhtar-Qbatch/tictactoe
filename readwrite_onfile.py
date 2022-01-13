@@ -3,14 +3,11 @@ from write_onfile import add_player_one, add_player_two
 
 #reading player 1 and player 2 data from files
 try:
-    file_player_one = open("Player1.txt","r")
+    file_player_one = open("Player1.txt", "r")
     file_player_one_data = file_player_one.read().splitlines()
 
-    file_player_two = open("Player2.txt","r")
+    file_player_two = open("Player2.txt", "r")
     file_player_two_data = file_player_two.read().splitlines()
-
-    # print(file_player_one_data,"\n")       
-    # print(file_player_two_data,"\n")
 except:
     print("Files can't be open")
 finally:
@@ -18,16 +15,16 @@ finally:
     file_player_two.close()
 
 #Filtering Required data from List
-player_one_data = list(map(lambda sub_list: sub_list.split(': ').pop(),file_player_one_data))
-player_two_data = list(map(lambda sub_list: sub_list.split(': ').pop(),file_player_two_data))
+player_one_data = list(map(lambda sub_list: sub_list.split(': ').pop(), file_player_one_data))
+player_two_data = list(map(lambda sub_list: sub_list.split(': ').pop(), file_player_two_data))
 
 #Creating Player1 and Player2
-player_one = Player(player_one_data[0],int(player_one_data[1]),int(player_one_data[2]))
-player_two = Player(player_two_data[0],int(player_two_data[1]),int(player_two_data[2]))
+player_one = Player(player_one_data[0], int(player_one_data[1]), int(player_one_data[2]))
+player_two = Player(player_two_data[0], int(player_two_data[1]), int(player_two_data[2]))
 
 #Player Details
 def player_detail(a):
-    a = int (a)
+    a = int(a)
     if a == 1: player_one.player_info()
     elif a == 2: player_two.player_info()
     else: print("Invalid Player/ No Record Found!")

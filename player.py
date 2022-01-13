@@ -13,7 +13,7 @@ class Player:
 
     #Display Player Info
     @player_detail_decorator
-    def player_info (self):
+    def player_info(self):
         print("\nPlayer Name: ", self.player_name)
         print("\nTotal Wins: ", self.total_win)
         print("\nTotal Loss: ", self.total_loss)
