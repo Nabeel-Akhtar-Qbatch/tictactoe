@@ -1,0 +1,3 @@
+Name: Fahad
+TotalWins: 8
+TotalLoss: 4
