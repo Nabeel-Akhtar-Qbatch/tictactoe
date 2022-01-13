@@ -1,3 +1,3 @@
-Name: Ali
-TotalWins: 1
-TotalLoss: 2
+Name: Fahad
+TotalWins: 3
+TotalLoss: 6

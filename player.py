@@ -1,23 +1,21 @@
-class player:
+class Player:
     "Player Class"
-    def __init__(self,PName = 'NoPlayer',TotalWins = 0,TotalLoss = 0):
-        self.PName = PName
-        self.TotalWins = TotalWins
-        self.TotalLoss = TotalLoss
+    def __init__(self, player_name='NoPlayer', total_win=0, total_loss=0):
+        self.player_name = player_name
+        self.total_win = total_win
+        self.total_loss = total_loss
 
-
-    def decoratorofPlayer(func):
+    def player_detail_decorator(func):
         def inner(self):
             print("\n","*" * 10,"Player Detail","*" * 10)
             func(self)
         return inner
 
     #Display Player Info
-    @decoratorofPlayer
-    def Player_info (self):
-        print("\nPlayer Name: ",self.PName)
-        print("\nTotal Wins: ",self.TotalWins)
-        print("\nTotal Loss: ",self.TotalLoss)
+    @player_detail_decorator
+    def player_info(self):
+        print("\nPlayer Name: ", self.player_name)
+        print("\nTotal Wins: ", self.total_win)
+        print("\nTotal Loss: ", self.total_loss)
 
 
-        
