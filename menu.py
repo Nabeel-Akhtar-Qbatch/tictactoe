@@ -27,13 +27,6 @@ def main_menu(func):
 
 @main_menu
 def menu_selection():
-    sel = input("\nPlease Enter:")
-    return int (sel)
-
-
-
-
-
-
-
+    selected = input("\nPlease Enter:")
+    return int (selected)
 

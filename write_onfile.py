@@ -1,7 +1,7 @@
-from gameBoard import theBoard
+from game_board import the_board
 
 #Appending Complete game record between Player1 and Player2 on File (record.txt)
-def writeBoard(board):
+def write_board(board):
     line1 = str(board['7'] + '|' + board['8'] + '|' + board['9'])
     line2 = '-+-+-'
     line3 = str(board['4'] + '|' + board['5'] + '|' + board['6'])
@@ -16,19 +16,19 @@ def writeBoard(board):
 
 #Adding New Player in Player Files 
 #Player1.txt
-def AddPlayer1(name,win,loss):
+def add_player_one(name,win,loss):
     try:
-        FP1 = open("Player1.txt","w")
-        updatePlayer = f"Name: {name}\nTotalWins: {win}\nTotalLoss: {loss}"
-        FP1.write(updatePlayer)
+        file_player_one = open("Player1.txt","w")
+        update_player = f"Name: {name}\nTotalWins: {win}\nTotalLoss: {loss}"
+        file_player_one.write(update_player)
     except:
         print("Player1 Can't Open\n New Player record is not saved")
 
 #Player2.txt
-def AddPlayer2(name,win,loss):
+def add_player_two(name,win,loss):
     try:
-        FP2 = open("Player2.txt","w")
-        updatePlayer = f"Name: {name}\nTotalWins: {win}\nTotalLoss: {loss}"
-        FP2.write(updatePlayer)
+        file_player_two = open("Player2.txt","w")
+        update_player = f"Name: {name}\nTotalWins: {win}\nTotalLoss: {loss}"
+        file_player_two.write(update_player)
     except:
         print("Player1 Can't Open\n New Player record is not saved")
